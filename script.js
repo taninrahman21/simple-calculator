@@ -1,4 +1,4 @@
-const buttons = Array.from(document.getElementsByClassName("button"));
+const buttons = document.getElementsByClassName("button");
 let result = document.getElementById("display-result");
 for (const button of buttons){
   button.addEventListener("click", function(event){
@@ -7,7 +7,6 @@ for (const button of buttons){
           result.value = "";
         } else if(buttonText === "Del"){
           result.value = result.value.slice(0,-1);
-        } else if(buttonText === "="){
         } else if(buttonText === "+/-"){
           result.value = result.value;
         } else if(buttonText === "="){
